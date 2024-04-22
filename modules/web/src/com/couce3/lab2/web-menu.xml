@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-lab2" insertBefore="administration" caption="mainMsg://menu_config.application-lab2">
+        <item screen="lab2_Example.browse" caption="mainMsg://menu_config.lab2_Example.browse"/>
+    </menu>
+    <menu id="administration" caption="Administration">
+        <item id="sec$User.browse"/>
+        <item id="sec$Group.browse"/>
+        <item id="sec$Role.browse"/>
+    </menu>
+</menu-config>

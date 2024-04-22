@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://registrationScreen.caption"
+        messagesPack="com.couce3.lab2.web.screens">
+    <actions>
+        <action id="submit"
+                caption="mainMsg://loginWindow.okButton"
+                icon="app/images/login-button.png"
+                shortcut="ENTER"/>
+    </actions>
+    <layout stylename="c-login-main-layout" expand="regWrapper">
+        <vbox id="regWrapper">
+            <vbox id="regMainBox"
+                  align="MIDDLE_CENTER"
+                  margin="true"
+                  stylename="c-login-panel"
+                  width="AUTO">
+                <hbox id="regTitleBox"
+                      align="MIDDLE_CENTER"
+                      spacing="true"
+                      stylename="c-login-title">
+                    <label id="welcomeLabel"
+                           align="MIDDLE_LEFT"
+                           stylename="c-login-caption"
+                           value="mainMsg://regWindow.regLabel"/>
+                </hbox>
+                <capsLockIndicator id="capsLockIndicator"
+                                   align="MIDDLE_CENTER"
+                                   stylename="c-login-capslockindicator"/>
+                <vbox id="regForm"
+                      spacing="true"
+                      stylename="c-login-form">
+                    <cssLayout id="loginCredentials"
+                               stylename="c-login-credentials">
+                        <textField id="loginField"
+                                   htmlName="loginField"
+                                   inputPrompt="mainMsg://loginWindow.loginPlaceholder"
+                                   stylename="c-login-username"/>
+                        <passwordField id="passwordField"
+                                       autocomplete="true"
+                                       htmlName="passwordField"
+                                       inputPrompt="mainMsg://loginWindow.passwordPlaceholder"
+                                       capsLockIndicator="capsLockIndicator"
+                                       stylename="c-login-password"/>
+                    </cssLayout>
+                    <linkButton id="toLoginBtn"
+                                caption="Already registered?"
+                                align="MIDDLE_RIGHT"/>
+                    <button id="regBtn"
+                            align="MIDDLE_CENTER"
+                            action="submit"
+                            stylename="c-login-submit-button"/>
+                </vbox>
+            </vbox>
+        </vbox>
+    </layout>
+</window>
